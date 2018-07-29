@@ -157,7 +157,7 @@ pre {
   margin-bottom: 0;
   overflow: auto;
   font-family: $font-family-monospace;
-  @include text-size(-1, 1em);
+  @include text-size(-1);
   line-height: $line-height-sm;
 }
 
@@ -244,7 +244,7 @@ var,
 samp,
 kbd {
   font-family: $font-family-monospace;
-  @include text-size(-1, 1em);
+  font-size: 1em;
 }
 
 ins {
