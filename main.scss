@@ -1,20 +1,17 @@
-$color-white: hsl(0, 0%, 100%);
-$color-gray-100: hsl(0, 0%, 98%);
-$color-gray-200: hsl(0, 0%, 93%);
-$color-gray-300: hsl(0, 0%, 88%);
-$color-primary: hsl(336, 78%, 43%);
-$color-primary-light: hsl(342, 94%, 66%);
-// $color-primary-dark: hsl(339, 100%, 27%);
-$color-secondary: hsl(210, 79%, 46%);
-$color-secondary-light: hsl(215, 100%, 69%);
-// $color-secondary-dark: hsl(212, 100%, 31%);
+$color-fg: hsl(189, 12%, 23%);
+$color-fg-muted: rgba($color-fg, 0.5);
+$color-fg-light: hsl(186, 4%, 44%);
+$color-fg-light-muted: rgba($color-fg-light, 0.5);
+$color-bg: hsl(120, 33%, 99%);
+$color-bg-muted: rgba($color-bg, 0.5);
+$color-bg-dark: hsl(100, 27%, 98%);
+$color-divider: hsl(100, 9%, 87%);
+$color-primary: hsl(345, 63%, 51%);
+$color-secondary: hsl(203, 94%, 39%);
+$color-secondary-muted: rgba($color-secondary, 0.5);
 
 $font-family-sans-serif: "YuGothic", sans-serif;
 $font-family-monospace: "Menlo", "Consolas", monospace;
-
-$color-text-high: hsla(0, 0%, 0%, 0.87);
-$color-text-medium: hsla(0, 0%, 0%, 0.6);
-$color-text-disabled: hsla(0, 0%, 0%, 0.38);
 
 $ratio: 1.8;
 
@@ -96,11 +93,12 @@ html {
 }
 
 :focus {
-  outline: 3px solid $color-secondary-light;
+  outline: 3px solid $color-secondary;
 }
 
 body {
-  color: $color-text-high;
+  color: $color-fg;
+  background-color: $color-bg;
 }
 
 h1,
@@ -164,7 +162,7 @@ pre {
 blockquote {
   margin: $spacer 0 0;
   padding-left: calc(#{$spacer} - 3px);
-  border-left: 3px solid $color-primary-light;
+  border-left: 3px solid $color-primary;
 
   @media #{$mq-md} {
     margin-left: $spacer * -1;
@@ -209,7 +207,7 @@ dd {
 a {
   color: $color-secondary;
   text-decoration: underline;
-  text-decoration-color: $color-secondary-light;
+  text-decoration-color: $color-secondary-muted;
 }
 
 a:focus {
@@ -231,7 +229,7 @@ em {
 
 strong {
   font-weight: bolder;
-  color: $color-white;
+  color: $color-bg;
   background-color: $color-primary;
 }
 
@@ -276,13 +274,13 @@ td {
   padding: $spacer-xs $spacer-sm;
   vertical-align: top;
   white-space: nowrap;
-  border: 1px solid hsla(0, 0%, 0%, 0.1);
+  border: 1px solid $color-divider;
 }
 
 th {
   font-weight: bolder;
   text-align: inherit;
-  background-color: $color-primary-light;
+  background-color: $color-bg-dark;
 }
 
 input,
@@ -292,7 +290,7 @@ textarea {
   padding: ($spacer-xs / 2) $spacer-xs;
   font: inherit;
   color: inherit;
-  border: 1px solid $color-gray-300;
+  border: 1px solid $color-divider;
 }
 
 [type="submit"],
@@ -300,11 +298,15 @@ textarea {
 [type="button"],
 button {
   -webkit-appearance: button;
-  background-color: $color-gray-200;
+  background-color: $color-bg-dark;
+}
+
+#globalheader-container {
+  background-color: $color-bg-dark;
 }
 
 #blog-title {
-  color: $color-white;
+  color: $color-bg;
   background-color: $color-primary;
 }
 
@@ -354,7 +356,7 @@ button {
   content: "";
   display: block;
   margin-top: $spacer;
-  border-bottom: 1px solid hsla(0, 0%, 0%, 0.1);
+  border-bottom: 1px solid $color-divider;
 
   @media #{$mq-sm} {
     margin-right: $spacer-sm * -1;
@@ -369,8 +371,8 @@ button {
 }
 
 .entry-date a {
-  color: $color-text-medium;
-  text-decoration-color: $color-text-disabled;
+  color: $color-fg-light;
+  text-decoration-color: $color-fg-light-muted;
 }
 
 .entry-title {
@@ -384,14 +386,12 @@ button {
 .entry-title a {
   color: inherit;
   text-decoration: none;
-  border-bottom: 1px dotted $color-text-disabled;
+  border-bottom: 1px dotted $color-fg-muted;
 
   @media #{$mq-md} {
-    padding-top: 0.1em;
-    padding-bottom: 0.1em;
-    color: $color-white;
+    color: $color-bg;
     border-bottom: 0;
-    background-color: $color-primary-light;
+    background-color: $color-primary;
   }
 }
 
@@ -441,8 +441,8 @@ button {
 }
 
 a.keyword {
-  text-decoration: underline dotted;
-  text-decoration-color: $color-text-disabled;
+  text-decoration: none;
+  border-bottom: 1px dotted $color-fg-muted;
 }
 
 .entry-footer {
@@ -451,7 +451,7 @@ a.keyword {
 
 .entry-footer-section {
   margin-top: $spacer-lg;
-  color: $color-text-medium;
+  color: $color-fg-light;
 }
 
 .entry-footer-modules {
@@ -517,7 +517,7 @@ a.keyword {
 #box2 {
   padding-top: $spacer-lg;
   padding-bottom: $spacer-lg;
-  background-color: $color-gray-100;
+  background-color: $color-bg-dark;
 }
 
 #box2-inner {
@@ -535,7 +535,7 @@ a.keyword {
 #footer {
   padding-top: $spacer;
   padding-bottom: $spacer;
-  color: $color-white;
+  color: $color-bg;
   @include text-size(-1);
   text-align: center;
   background-color: $color-primary;
@@ -543,7 +543,7 @@ a.keyword {
 
 #footer a {
   color: inherit;
-  text-decoration-color: rgba($color-white, 0.6);
+  text-decoration-color: $color-bg-muted;
 }
 
 #footer-inner {
