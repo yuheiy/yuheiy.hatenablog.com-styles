@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "node bin.js start",
+    "build": "node bin.js build"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.0.1",
+    "bach": "^1.2.0",
+    "browser-sync": "^2.24.6",
+    "csswring": "^7.0.0",
+    "gulp-header": "^2.0.5",
+    "gulp-if": "^2.0.2",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "postcss-gap-properties": "^1.0.0",
+    "vinyl-fs": "^3.0.3"
+  }
+}
