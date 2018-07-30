@@ -417,8 +417,8 @@ button {
 .entry-content h4,
 .entry-content h5 {
   @media #{$mq-md} {
-    margin-right: -2em;
-    margin-left: -2em;
+    margin-right: $ratio * 1em * -1;
+    margin-left: $ratio * 1em * -1;
   }
 }
 
