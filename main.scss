@@ -457,6 +457,14 @@ a.keyword {
   border-bottom: 1px dotted $color-fg-muted;
 }
 
+.about-subscription-count {
+  display: block;
+}
+
+.entry-content .profile-icon {
+  vertical-align: baseline;
+}
+
 .entry-footer {
   @extend %centered-content;
 }
