@@ -333,15 +333,18 @@ button {
   outline-offset: -3px;
 }
 
-#main-inner {
+#main {
   margin-bottom: $spacer-xl;
 }
 
-.entry-inner {
-  margin-top: $spacer-xl;
+.archive-heading {
+  @extend %centered-full;
+  margin-top: $spacer;
+  @include text-size;
 }
 
-.entry-header {
+.entry-header,
+.archive-entry-header {
   @extend %centered-full;
 }
 
@@ -362,7 +365,11 @@ button {
   }
 }
 
-.entry-date a {
+.date {
+  margin-top: $spacer-xl;
+}
+
+.date a {
   color: $color-fg-light;
   text-decoration-color: $color-fg-light-muted;
 }
@@ -391,13 +398,30 @@ button {
   position: absolute;
 }
 
-.entry-content {
+.entry-thumb-link {
+  display: block;
+  @extend %centered-full;
+  margin-top: $spacer-lg;
+}
+
+.entry-thumb {
+  float: right !important;
+  width: $line-height * 1rem * 3.5 !important;
+  height: $line-height * 1rem * 3.5 !important;
+  margin-right: 0 !important;
+  margin-bottom: $spacer-sm;
+  margin-left: $spacer;
+}
+
+.entry-content,
+.archive-entry-body {
   @extend %centered-content;
+  margin-top: $spacer-lg;
   hanging-punctuation: allow-end;
 }
 
-.entry-content > :first-child {
-  margin-top: $spacer-lg;
+.entry-content:first-child {
+  margin-top: $spacer-xl;
 }
 
 .entry-content h2,
@@ -456,6 +480,11 @@ a.keyword {
 
 .comment-box {
   margin-top: $spacer-lg;
+}
+
+.archive-entry-body .social-buttons {
+  display: block;
+  margin-top: $spacer;
 }
 
 .pager {
