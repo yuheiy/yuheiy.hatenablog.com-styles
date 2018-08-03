@@ -333,19 +333,11 @@ button {
 }
 
 #main-inner {
-  margin-bottom: $spacer-lg;
-
-  @media #{$mq-md} {
-    margin-bottom: $spacer-xl;
-  }
+  margin-bottom: $spacer-xl;
 }
 
 .entry-inner {
-  margin-top: $spacer-lg;
-
-  @media #{$mq-md} {
-    margin-top: $spacer-xl;
-  }
+  margin-top: $spacer-xl;
 }
 
 .entry-header {
@@ -355,7 +347,7 @@ button {
 .entry-header::after {
   content: "";
   display: block;
-  margin-top: $spacer;
+  margin-top: $spacer-lg;
   border-bottom: 1px solid $color-divider;
 
   @media #{$mq-sm} {
@@ -364,7 +356,6 @@ button {
   }
 
   @media #{$mq-md} {
-    margin-top: $spacer-lg;
     margin-right: $spacer * -1;
     margin-left: $spacer * -1;
   }
@@ -405,11 +396,7 @@ button {
 }
 
 .entry-content > :first-child {
-  margin-top: $spacer;
-
-  @media #{$mq-md} {
-    margin-top: $spacer-lg;
-  }
+  margin-top: $spacer-lg;
 }
 
 .entry-content h2,
@@ -472,12 +459,8 @@ a.keyword {
 
 .pager {
   @extend %centered-content;
-  margin-top: $spacer-lg;
+  margin-top: $spacer-xl;
   text-align: center;
-
-  @media #{$mq-md} {
-    margin-top: $spacer-xl;
-  }
 }
 
 .pager-prev,
