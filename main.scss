@@ -398,23 +398,7 @@ button {
   position: absolute;
 }
 
-.entry-thumb-link {
-  display: block;
-  @extend %centered-full;
-  margin-top: $spacer-lg;
-}
-
-.entry-thumb {
-  float: right !important;
-  width: $line-height * 1rem * 3.5 !important;
-  height: $line-height * 1rem * 3.5 !important;
-  margin-right: 0 !important;
-  margin-bottom: $spacer-sm;
-  margin-left: $spacer;
-}
-
-.entry-content,
-.archive-entry-body {
+.entry-content {
   @extend %centered-content;
   margin-top: $spacer-lg;
   hanging-punctuation: allow-end;
@@ -463,6 +447,26 @@ a.keyword {
 
 .entry-content .profile-icon {
   vertical-align: baseline;
+}
+
+.entry-thumb-link {
+  display: block;
+  @extend %centered-full;
+  margin-top: $spacer;
+}
+
+.entry-thumb {
+  float: right !important;
+  width: $line-height * 1rem * 3.5 !important;
+  height: $line-height * 1rem * 3.5 !important;
+  margin-right: 0 !important;
+  margin-bottom: $spacer-sm;
+  margin-left: $spacer;
+}
+
+.archive-entry-body {
+  @extend %centered-full;
+  margin-top: $spacer;
 }
 
 .entry-footer {
