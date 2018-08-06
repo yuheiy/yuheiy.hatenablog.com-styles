@@ -367,6 +367,7 @@ button {
 
 .date {
   margin-top: $spacer-xl;
+  @include text-size(-1);
 }
 
 .date a {
@@ -475,6 +476,7 @@ a.keyword {
 
 .entry-footer-section {
   margin-top: $spacer-lg;
+  @include text-size(-1);
   color: $color-fg-light;
 }
 
