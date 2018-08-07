@@ -15,9 +15,9 @@ $font-family-monospace: "Menlo", "Consolas", monospace;
 
 $ratio: 1.8;
 
-$ratio-text: 1;
-$ratio-text-lg: $ratio-text * 1.125;
-$ratio-text-xl: $ratio-text * 1.25;
+$ratio-root-text: 1;
+$ratio-root-text-lg: $ratio-root-text * 1.125;
+$ratio-root-text-xl: $ratio-root-text * 1.25;
 
 $line-height: $ratio;
 $line-height-sm: $line-height * 0.75;
@@ -31,8 +31,8 @@ $spacer-sm: $spacer / 2;
 $spacer-lg: $spacer * 2;
 $spacer-xl: $spacer * 4;
 
-$mq-sm: "(min-width: #{($width-content + $spacer * 2) * $ratio-text-lg / 1rem * 1em})";
-$mq-md: "(min-width: #{($width-full + $spacer * 4) * $ratio-text-xl / 1rem * 1em})";
+$mq-sm: "(min-width: #{($width-content + $spacer * 2) * $ratio-root-text-lg / 1rem * 1em})";
+$mq-md: "(min-width: #{($width-full + $spacer-lg * 2) * $ratio-root-text-xl / 1rem * 1em})";
 
 %centered {
   max-width: $width-content;
@@ -78,17 +78,18 @@ $mq-md: "(min-width: #{($width-full + $spacer * 4) * $ratio-text-xl / 1rem * 1em
 
 html {
   font-family: $font-family-sans-serif;
+  font-size: percentage($ratio-root-text);
   line-height: $line-height;
   font-kerning: none;
   overflow-wrap: break-word;
   text-underline-position: under;
 
   @media #{$mq-sm} {
-    font-size: percentage($ratio-text-lg);
+    font-size: percentage($ratio-root-text-lg);
   }
 
   @media #{$mq-md} {
-    font-size: percentage($ratio-text-xl);
+    font-size: percentage($ratio-root-text-xl);
   }
 }
 
