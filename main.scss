@@ -113,6 +113,7 @@ h5 {
 }
 
 h1 {
+  margin-top: 0;
   @include text-size(4);
 }
 
@@ -316,7 +317,6 @@ button {
 }
 
 #title {
-  margin-top: 0;
   font-size: inherit;
   line-height: 1;
 }
